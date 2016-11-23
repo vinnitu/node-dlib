@@ -1,0 +1,14 @@
+{
+  "name": "dlib",
+  "version": "1.0.0",
+  "author": {
+    "name": "Victor Y. Sklyar",
+    "email": "vinnitu@gmail.com"
+  },
+  "description": "dlib face detector wrapper",
+  "main": "build/Release/dlib",
+  "gypfile": true,
+  "dependencies": {
+    "nan": "*"
+  }
+}

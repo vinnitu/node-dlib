@@ -1,2 +1,1 @@
-# dlib
-dlib face detector wrapper
+npm i node-dlib

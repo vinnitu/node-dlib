@@ -4,7 +4,7 @@
       "target_name": "dlib",
       "sources": [
         "dlib.cc",
-        "detectObject.cc"
+        "frontalFaceDetector.cc"
       ],
       "include_dirs": ["<!(node -e \"require('nan')\")"],
       "cflags_cc!": [ "-fno-rtti" ],

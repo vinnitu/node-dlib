@@ -1,1 +1,1 @@
-npm i node-dlib
+npm install node-dlib

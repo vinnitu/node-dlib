@@ -1,16 +1,8 @@
-#include "detectObject.h"
+#include <nan.h>
+#include "frontalFaceDetector.h"
 
-using v8::FunctionTemplate;
-using v8::Handle;
-using v8::Object;
-using v8::String;
-using Nan::GetFunction;
-using Nan::New;
-using Nan::Set;
-
-NAN_MODULE_INIT(InitAll) {
-  Set(target, New<String>("detectObject").ToLocalChecked(),
-    GetFunction(New<FunctionTemplate>(DetectObject)).ToLocalChecked());
+void InitAll(v8::Local<v8::Object> exports) {
+  FrontalFaceDetector::Init(exports);
 }
 
 NODE_MODULE(dlib, InitAll)

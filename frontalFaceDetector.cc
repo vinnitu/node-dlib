@@ -182,7 +182,9 @@ void FrontalFaceDetector::New(const Nan::FunctionCallbackInfo<v8::Value>& info) 
     const int argc = 1;
     v8::Local<v8::Value> argv[argc] = { info[0] };
     v8::Local<v8::Function> cons = Nan::New<v8::Function>(constructor);
-    info.GetReturnValue().Set(cons->NewInstance(argc, argv));
+    v8::MaybeLocal<v8::Object> inst = Nan::NewInstance(cons, argc, argv);
+    if (!inst.IsEmpty())
+      info.GetReturnValue().Set(inst.ToLocalChecked());
   }
 }
 
